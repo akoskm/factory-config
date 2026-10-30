@@ -1,0 +1,25 @@
+maxSteps: 40
+startAgent: foreman
+revisionCap: 2
+workspaceAgents:
+  - triage
+  - spec
+  - implement
+  - review
+  - verify
+  - monitor
+pushAgents:
+  - implement
+  - verify
+learnAgent: monitor
+routes:
+  review:
+    revise: implement
+    default: foreman
+  verify:
+    fail: fail
+    default: foreman
+  default: foreman
+onComplete:
+  - mergeProduct
+  - monitor
