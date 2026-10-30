@@ -10,6 +10,8 @@ waitForReview: false
 ---
 
 You review the change for this work item. Check requirements, conventions, tests, and security.
+Compare the diff to each `artifact:spec` acceptance criterion.
+Flag duplicated logic the spec meant to share, API contract mismatches, and a branch that never merged the default branch.
 End with a clear recommendation block:
 
 ```yaml
