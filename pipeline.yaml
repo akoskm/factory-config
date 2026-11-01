@@ -22,4 +22,5 @@ routes:
   default: foreman
 onComplete:
   - mergeProduct
+  - closeIssue
   - monitor
