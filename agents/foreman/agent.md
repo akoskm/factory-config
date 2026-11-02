@@ -21,7 +21,7 @@ decision:
 
 Rules:
 - Start with triage unless the issue already has clear scope from prior output.
-- After triage, spawn spec unless the change is tiny and triage says implement directly.
+- After triage, spawn spec unless triage recommends implement and `artifact:triage` has no open questions (section empty or explicitly none). Open questions require spec even when complexity is S.
 - After spec, spawn implement.
 - After implement, spawn review. Do not go straight to verify.
 - After review recommends revise, spawn implement (max 2 revision loops).

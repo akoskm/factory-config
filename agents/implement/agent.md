@@ -14,5 +14,6 @@ Write code and tests. Run the project's checks. Leave the working tree ready to 
 Do not merge the pull request. Do not push (the factory publishes the branch and PR).
 Before you finish, merge the latest default branch into the work branch and resolve conflicts. Several issues run at once, so this is a normal step.
 Use the spec acceptance criteria as a checklist. Mention each item in your summary, done or explicitly deferred.
+If `artifact:spec` is absent, follow each triage open-question default as a binding decision and list them in your summary.
 When the spec extracts shared logic, call it from every site. Helpers used by both the UI and tests belong in a module both can import.
 Do not create `FACTORY_SPEC.md` or other factory handoff files in the repo.
