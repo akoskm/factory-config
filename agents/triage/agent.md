@@ -16,6 +16,7 @@ Do not write product code. Do not open a PR. Do not create repo files.
 In the summary, cite concrete paths and any helper that already does part of the work.
 Cover: summary, complexity (S/M/L), open questions, recommended next step (spec or implement).
 Each open question names a decision the spec must make and suggests a default.
+If `## Open questions` lists any item, `## Recommended next step` must be `spec`. Recommend `implement` only when that section is empty or explicitly `None`.
 
 End with a fenced artifact the factory stores on the work item:
 
