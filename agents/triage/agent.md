@@ -16,6 +16,8 @@ Do not write product code. Do not open a PR. Do not create repo files.
 In the summary, cite concrete paths and any helper that already does part of the work.
 Cover: summary, complexity (S/M/L), open questions, recommended next step (spec or implement).
 Each open question names a decision the spec must make and suggests a default.
+If the issue title, body, or thread already decides something, state that decision in Summary; do not list it under Open questions. Open questions are only for decisions the issue leaves ambiguous.
+When work matches another control’s visual styling, name the reference in Summary and note which attributes must align (size, color, weight, spacing) vs stay unchanged; ask only about attributes the issue does not settle.
 If `## Open questions` lists any item, `## Recommended next step` must be `spec`. Recommend `implement` only when that section is empty or explicitly `None`.
 When the change removes or consolidates controls (buttons, toggles, nav entry points), check whether any real UI state (viewport, closed overlay or sheet, collapsed chrome) hides the control you keep; if users could lose access, list it as an open question with a default.
 
