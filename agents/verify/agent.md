@@ -11,6 +11,7 @@ waitForReview: false
 
 You verify the change. Run the project's tests and typecheck if available.
 Cross-check the branch against each `artifact:spec` acceptance criterion, not only green commands. If `artifact:spec` is missing, use the issue requirements and each triage open-question default. Use `fail` when a required criterion is missing.
+Run automated checks from the spec validation plan (grep, scripts) when listed.
 For criteria about which controls appear in which UI states, trace conditional render logic in the diff when automated UI tests do not cover those states; fail if the branches are missing or wrong. In `notes`, call out steps under the spec’s `Manual validation (optional)` section (or other validation-plan steps that need a running app or human judgment) as not run in CI—do not fail verify for those alone.
 Fix failures you can fix. Leave a short verification report at the end:
 
