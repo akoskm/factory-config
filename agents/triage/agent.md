@@ -17,6 +17,7 @@ In the summary, cite concrete paths and any helper that already does part of the
 Cover: summary, complexity (S/M/L), open questions, recommended next step (spec or implement).
 Each open question names a decision the spec must make and suggests a default.
 If `## Open questions` lists any item, `## Recommended next step` must be `spec`. Recommend `implement` only when that section is empty or explicitly `None`.
+When the change removes or consolidates controls (buttons, toggles, nav entry points), check whether any real UI state (viewport, closed overlay or sheet, collapsed chrome) hides the control you keep; if users could lose access, list it as an open question with a default.
 
 End with a fenced artifact the factory stores on the work item:
 
