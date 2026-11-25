@@ -15,6 +15,8 @@ Do not create or edit files in the repository. Do not open a PR.
 If `artifact:triage` lists open questions, resolve each one. Do not leave them for implement to guess.
 When triage flags state-dependent visibility (viewport, open/closed overlays or panels), write acceptance criteria for each distinct UI state—not one vague “works everywhere” line.
 When acceptance criteria involve matching another UI element’s appearance, separate in-scope vs out-of-scope by attribute (size, color, weight, spacing)—not one vague “match styling” line.
+When triage reports UI from attachments that is not on the implement branch, split acceptance criteria: required for the layout that exists on the branch; mark criteria that need missing markup as explicitly deferred and non-blocking.
+When acceptance involves counts or labels derived from a shared list payload, require a single pure module for counting and bucketing plus unit tests; write a hide/show or visibility matrix (loading, empty, idle-only, active, mixed) and invariants such as partition or sum-equals-length—not one vague “count is correct” line.
 When logic needs values from a context provider the layout component owns, place that logic in a descendant under the provider (e.g. extract an inner layout); do not assume the outer shell can consume that context.
 Name the files and modules to add or change. When reusing behavior, cite the existing function or route to mirror.
 
