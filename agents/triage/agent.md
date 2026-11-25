@@ -15,11 +15,15 @@ Do not write product code. Do not open a PR. Do not create repo files.
 
 In the summary, cite concrete paths and any helper that already does part of the work.
 Cover: summary, complexity (S/M/L), open questions, recommended next step (spec or implement).
-Each open question names a decision the spec must make and suggests a default.
+Each open question names a decision the human (Inbox) or spec must make and suggests a default.
 If the issue title, body, or thread already decides something, state that decision in Summary; do not list it under Open questions. Open questions are only for decisions the issue leaves ambiguous.
 When work matches another control’s visual styling, name the reference in Summary and note which attributes must align (size, color, weight, spacing) vs stay unchanged; ask only about attributes the issue does not settle.
-If `## Open questions` lists any item, `## Recommended next step` must be `spec`. Recommend `implement` only when that section is empty or explicitly `None`.
+If `## Open questions` lists any item, `## Recommended next step` must be `spec` (foreman parks via `ask_user` until the human answers, then runs spec). Recommend `implement` only when that section is empty or explicitly `None`.
 When the change removes or consolidates controls (buttons, toggles, nav entry points), check whether any real UI state (viewport, closed overlay or sheet, collapsed chrome) hides the control you keep; if users could lose access, list it as an open question with a default.
+
+**Attachments vs code:** Reconcile screenshots and attachments with the working tree. If the attachment shows UI, copy, or layout that is not on this branch (e.g. sectioned table on screenshot, flat table in repo), list that as an open question — do not assume which branch is correct or invent counts/semantics for missing UI.
+
+**Open questions:** Only put real blocking questions here. Use `None` when scope is clear. Non-empty open questions park the work item in Inbox via the foreman (`ask_user`) before spec/implement.
 
 End with a fenced artifact the factory stores on the work item:
 
