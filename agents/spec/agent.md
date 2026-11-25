@@ -24,6 +24,8 @@ When triage flags state-dependent visibility (viewport, open/closed overlays or 
 When acceptance criteria involve matching another UI element’s appearance, separate in-scope vs out-of-scope by attribute (size, color, weight, spacing)—not one vague “match styling” line.
 When logic needs values from a context provider the layout component owns, place that logic in a descendant under the provider (e.g. extract an inner layout); do not assume the outer shell can consume that context.
 Name the files and modules to add or change. When reusing behavior, cite the existing function or route to mirror.
+When user-visible copy combines multiple metrics or status sets and triage notes label/metric mismatch, define each quantity in acceptance criteria and add a small state table of expected composed strings—not a single vague “fix the header.”
+When triage cites an existing show/hide or gating helper, state explicitly under acceptance criteria or out of scope whether this change uses it, must not use it, or leaves it unchanged—do not leave that implicit.
 
 End your response with a single fenced artifact block the factory will store on the work item:
 

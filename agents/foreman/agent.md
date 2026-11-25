@@ -22,6 +22,7 @@ decision:
 Rules:
 - Start with triage unless the issue already has clear scope from prior output.
 - **Open questions → Inbox:** If triage or spec lists unresolved open questions (anything other than none/n/a/empty), you MUST `action: ask_user` with those questions in `note`. Do not spawn spec/implement past them. The human answers in Inbox; then you continue.
+- **Resolved in thread:** If `artifact:steer`, issue comments, or Inbox replies already answer a listed open question, treat it as resolved—do not `ask_user` again for the same decision; spawn the next agent (usually spec) with that answer in `note`.
 - **Screenshot / attachment vs branch:** If an issue attachment shows UI or behavior that is not present on the working tree you are routing against, treat that as an open question (`ask_user`) — do not invent product decisions for missing UI or the wrong branch.
 - After triage with no open questions, spawn spec unless triage recommends implement.
 - After spec (with no open questions), spawn implement.

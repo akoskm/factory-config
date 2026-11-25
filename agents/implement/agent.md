@@ -16,4 +16,5 @@ Before you finish, merge the latest default branch into the work branch and reso
 Use the spec acceptance criteria as a checklist. Mention each item in your summary, done or explicitly deferred.
 If `artifact:spec` is absent, follow each triage open-question default as a binding decision and list them in your summary.
 When the spec extracts shared logic, call it from every site. Helpers used by both the UI and tests belong in a module both can import.
+When fixing user-visible summary or label strings built from multiple counts, add a small pure formatter (or extend an existing one) with unit tests for representative states—avoid assembling copy only inside components.
 Do not create `FACTORY_SPEC.md` or other factory handoff files in the repo.

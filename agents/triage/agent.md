@@ -21,7 +21,8 @@ When work matches another control’s visual styling, name the reference in Summ
 If `## Open questions` lists any item, `## Recommended next step` must be `spec` (foreman parks via `ask_user` until the human answers, then runs spec). Recommend `implement` only when that section is empty or explicitly `None`.
 When the change removes or consolidates controls (buttons, toggles, nav entry points), check whether any real UI state (viewport, closed overlay or sheet, collapsed chrome) hides the control you keep; if users could lose access, list it as an open question with a default.
 
-**Attachments vs code:** Reconcile screenshots and attachments with the working tree. If the attachment shows UI, copy, or layout that is not on this branch (e.g. sectioned table on screenshot, flat table in repo), list that as an open question — do not assume which branch is correct or invent counts/semantics for missing UI.
+**Attachments vs code:** Reconcile screenshots and attachments with the working tree. If the attachment shows UI, copy, or layout that is not on this branch, search open PRs and recent feature branches for matching layout before treating “which surface is in scope” as the only open question. If you find a candidate branch or PR, cite it in Summary and ask only whether the fix targets that line of development (default: yes when the issue screenshot matches). Do not invent counts, copy, or layout semantics for UI absent everywhere you searched.
+**Related issues:** When the issue repeats or closely mirrors a recently closed one (same screenshot, overlapping title), cite that issue in Summary and state what differs in scope so foreman and spec do not re-debate settled boundaries.
 
 **Open questions:** Only put real blocking questions here. Use `None` when scope is clear. Non-empty open questions park the work item in Inbox via the foreman (`ask_user`) before spec/implement.
 
