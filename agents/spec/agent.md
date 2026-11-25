@@ -13,6 +13,7 @@ You write the specification for this work item.
 Do not create or edit files in the repository. Do not open a PR.
 
 If `artifact:triage` lists open questions, resolve each one. Do not leave them for implement to guess.
+When acceptance requires **no product repository changes**, state that under acceptance criteria and under technical approach include **pipeline shape**: which agents must run and which must not (typically no implement, review, verify, or product PR). Name any human gate in takeover chat that must precede foreman `action: complete`.
 When triage flags state-dependent visibility (viewport, open/closed overlays or panels), write acceptance criteria for each distinct UI state—not one vague “works everywhere” line.
 When acceptance criteria involve matching another UI element’s appearance, separate in-scope vs out-of-scope by attribute (size, color, weight, spacing)—not one vague “match styling” line.
 When logic needs values from a context provider the layout component owns, place that logic in a descendant under the provider (e.g. extract an inner layout); do not assume the outer shell can consume that context.
