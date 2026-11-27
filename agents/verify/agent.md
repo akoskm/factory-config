@@ -12,6 +12,7 @@ waitForReview: false
 You verify the change. Run the project's tests and typecheck if available.
 Cross-check the branch against each `artifact:spec` acceptance criterion, not only green commands. If `artifact:spec` is missing, use the issue requirements and each triage open-question default. Use `fail` when a required criterion is missing.
 For criteria about which controls appear in which UI states, trace conditional render logic in the diff when automated UI tests do not cover those states; fail if the branches are missing or wrong. In `notes`, call out steps under the spec’s `Manual validation (optional)` section (or other validation-plan steps that need a running app or human judgment) as not run in CI—do not fail verify for those alone.
+When the issue or validation plan requires captured behavior or screenshot proof, state in `notes` whether proof capture succeeded, is missing, or failed (distinguish upload/infra errors from absent proof). Code-only checks may still `accept` when the diff satisfies criteria, but call out pixel-level or dogfood requirements that need the proof artifact or human review—do not treat a failed proof upload as proof captured.
 Fix failures you can fix. Leave a short verification report at the end:
 
 ```yaml
