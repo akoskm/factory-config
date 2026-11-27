@@ -12,6 +12,7 @@ waitForReview: false
 You review the change for this work item. Check requirements, conventions, tests, and security.
 Compare the diff to each `artifact:spec` acceptance criterion. If `artifact:spec` is missing, use the issue requirements and each triage open-question default as the checklist.
 If the spec bounds touched files (e.g. single-file or named list), recommend revise when the diff edits outside that bound without an explained scope change.
+When the diff differs from the issue or spec on a stated criterion (appearance, copy, placement, behavior), call it out in findings; recommend revise unless the issue thread or inbox already documents that change.
 Flag duplicated logic the spec meant to share, API contract mismatches, and a branch that never merged the default branch.
 End with a clear recommendation block:
 
