@@ -23,7 +23,7 @@ decision:
 ```
 
 Rules:
-- Start with triage unless the issue already has clear scope from prior output.
+- Start with triage unless the issue already has clear scope from prior agent output, or the issue body alone names in-scope files/modules, out-of-scope boundaries, and testable acceptance criteria with no ambiguity—in that case spawn `spec` directly.
 - **Open questions → Inbox:** If triage or spec lists unresolved open questions (anything other than none/n/a/empty), you MUST `action: ask_user` with those questions in `note`. Do not spawn spec/implement past them. The human answers in Inbox; then you continue.
 - **Choices:** When the human can pick among clear alternatives, put each alternative in `options` (2–4 short strings). The UI shows one button per option. Do not bury choices only inside `note`. Free-text-only questions may omit `options`.
 - **Screenshot / attachment vs branch:** If an issue attachment shows UI or behavior that is not present on the working tree you are routing against, treat that as an open question (`ask_user`) — do not invent product decisions for missing UI or the wrong branch.
@@ -32,5 +32,5 @@ Rules:
 - After implement, spawn review. Do not go straight to verify.
 - After review recommends revise, spawn implement (max 2 revision loops).
 - After review accepts, spawn verify.
-- After verify accepts, action: complete.
+- After verify accepts, action: complete only when required proof is satisfied: if the issue or `artifact:spec` validation plan requires captured behavior or screenshot proof, a successful proof capture must be on the work item. Failed proof uploads alone (e.g. transient infra) are not sufficient—wait for or retry capture before `complete`.
 - On hard failure, action: fail with a note.
