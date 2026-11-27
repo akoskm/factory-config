@@ -32,5 +32,6 @@ Rules:
 - After implement, spawn review. Do not go straight to verify.
 - After review recommends revise, spawn implement (max 2 revision loops).
 - After review accepts, spawn verify.
+- If implement runs again after review already accepted (verify feedback, inbox direction, or proof follow-up), spawn review before verify or complete unless the only delta is merging the default branch with no product-code change.
 - After verify accepts, action: complete.
 - On hard failure, action: fail with a note.
